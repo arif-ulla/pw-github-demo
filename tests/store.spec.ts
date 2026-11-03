@@ -47,7 +47,7 @@ test('customer can add a product to the shopping cart', async ({ page }) => {
   await searchResultsPage.openProduct('iPhone');
   await productDetailsPage.addToCart();
 
-  await expect(page.getByText(/Success: You have added/)).toContainText('iPhone-FAILING INTENTIONALLY');
+  await expect(page.getByText(/Success: You have added/)).toContainText('iPhone');
   await expect(page.getByRole('button', { name: /1 item\(s\)/ })).toBeVisible();
 });
 
